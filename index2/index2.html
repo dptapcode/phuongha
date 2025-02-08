@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Bài hát</title>
+</head>
+<body>
+    <div class="buttons">
+        <a href="../index1.html" class="btn btn-bir">Quay lại</a>
+    </div>
+    <div class="container">
+        <h1>Bài hát yêu thích của tôi.</h1>
+        <video controls class="vid" src="images/nhachay1.mp4"></video>
+    </div>
+
+    <div class="confetti">
+        <!-- Confetti pieces will be generated here by JavaScript -->
+    </div>
+
+    <script>
+        function createConfetti() {
+            const confettiPiece = document.createElement('div');
+            confettiPiece.classList.add('confetti-piece');
+            confettiPiece.style.left = `${Math.random() * 100}%`;
+            confettiPiece.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            confettiPiece.style.animationDuration = `${Math.random() * 3 + 2}s`;
+            document.querySelector('.confetti').appendChild(confettiPiece);
+
+            setTimeout(() => {
+                confettiPiece.remove();
+            }, 5000);
+        }
+
+        setInterval(createConfetti, 300);
+    </script>
+    
+
+    
+</body>
+
+</html>

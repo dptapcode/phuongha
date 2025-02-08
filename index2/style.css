@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(150deg, rgb(230, 65, 216), rgb(27, 223, 115));
+    font-family: 'Poppins', sans-serif; /* Chọn font mặc định cho body */
+    overflow: hidden;
+}
+
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 0;
+    animation: glow 2s infinite alternate;
+}
+
+p {
+    font-size: 1.5rem;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff0;
+    animation: fall 5s linear infinite;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #ff0, 0 0 20px #ff0, 0 0 30px #ff0, 0 0 40px #ff0;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff0, 0 0 30px #ff0, 0 0 40px #ff0, 0 0 50px #ff0, 0 0 60px #ff0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
